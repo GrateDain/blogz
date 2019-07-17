@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+            .error { color: red; margin-left: 30px;}
+            h1 { text-align: center;}
+            h2 { padding-left: 30px; color: blueviolet;}
+            a { padding: 0px 20px;}
+            p, form { padding-left: 10px;}
+            #submit { margin: 20px;}
+        </style>
+    </head>
+<body>
+    <a href='/'>Main Page</a>
+    <a href='/newpost'>Make a New Entry</a>
+
+    {% block content %}
+    {% endblock %}
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% for category,message in messages %}
+        <h3 class='{{category}}'>{{message}}</h3>
+    {% endfor %}
+    {% endwith %}
+
+</body>
+</html>
