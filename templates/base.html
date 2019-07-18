@@ -3,17 +3,23 @@
     <head>
         <title>{{title}}</title>
         <style>
-            .error { color: red; margin-left: 30px;}
-            h1 { text-align: center;}
-            h2 { padding-left: 30px; color: blueviolet;}
-            a { padding: 0px 20px;}
-            p, form { padding-left: 10px;}
-            #submit { margin: 20px;}
+            .nav { margin: 40px;}
+            .error { color: red; margin-left: 60px;}
+            .info {color: green; margin-left: 60px;}
+            h1 { margin-left: 120px;}
+            h2 { margin: 30px; color: blueviolet;}
+            p, form { margin-left: 20px;}
+            #submit { margin: 40px;}
+            .by { font-size: 10px;}
+        
         </style>
     </head>
 <body>
-    <a href='/'>Main Page</a>
-    <a href='/newpost'>Make a New Entry</a>
+    <a class='nav' href='/'>Main Page</a>
+    <a class='nav' href='/newpost'>Make a New Entry</a>
+    <a class='nav' href='/allposts'>All Blogz Posts</a>
+    <a class='nav' href='/login'>Log In</a>
+    <a class='nav' href='/logout'>Log Out</a>
 
     {% block content %}
     {% endblock %}

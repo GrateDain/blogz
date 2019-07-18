@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h2>{{singleblog.blog_title}}</h2>
+  <p>
+    {{singleblog.blog_entry}}
+  </p>
+  <p class='by'>by
+        <a href='/singleauthor?author={{author}}', name='author' value='{{author}}''>{{author}}</a>
+  </p>
+
+  {% endblock %}

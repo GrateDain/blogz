@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if blogs|length == 0 %}
+    <h1>No entries yet</h1>
+    {% else %}
+    <h1>All Blogz Entries</h1>
+        {% for blog in blogs %}
+        <h2><a href='/singleblog?blogid={{blog.id}}', name='blog_id' value='{{blog.id}}''>{{blog.blog_title}}</a></h2>
+        <p>
+          {{blog.blog_entry}}
+<!--        </p>
+        <p class='by'>by
+          <a href='/singleauthor?author={{author.name}}', name='author' value='{{author.name}}''>{{author.name}}</a>
+        </p>
+
+        <br />
+-->
+        {% endfor %}
+
+    {% endif %}
+
+{% endblock %}
